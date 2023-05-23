@@ -8,10 +8,10 @@ public class OperatorPractice {
 		OperatorPractice o = new OperatorPractice();
 //		o.method1();
 //		o.method2();
-//		o.method3();
+		o.method3();
 //		o.method4();
 //		o.method5();
-		o.method6();
+//		o.method6();
 	}
 	public void method1() {
 		
@@ -49,6 +49,7 @@ public class OperatorPractice {
 	public void method3() {
 		
 		int num1, num2, num3=0;
+		boolean result = true;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -61,8 +62,9 @@ public class OperatorPractice {
 		System.out.println("입력3 : ");
 		num3 = sc.nextInt();
 		
-		System.out.println(num1 == num2 ? "true" : num2 == num3 ? "true" : "false");
+		result= (num1 == num2) && (num2 == num3);
 		
+		System.out.println(result);
 	}
 	public void method4() {
 		

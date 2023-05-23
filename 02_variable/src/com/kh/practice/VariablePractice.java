@@ -12,7 +12,8 @@ public class VariablePractice {
 //		vp.method2();
 //		vp.method3();
 //		vp.method4();
-		vp.method5();
+//		vp.method5();
+		vp.method6();
 	}
 
 	public void method1() {
@@ -69,11 +70,11 @@ public class VariablePractice {
 		
 		System.out.println("문자열을 입력하세요: ");
 		String str = sc.nextLine();
-		
 		char first = str.charAt(0);
+		char last = str.charAt(str.length()-1);
+		
 		System.out.println("첫번째 문자: " + first);
 		
-		char last = str.charAt(7);
 		System.out.println("마지막 문자: " + last);
 		
 	}
@@ -81,12 +82,33 @@ public class VariablePractice {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		
 		System.out.println("문자: ");
 		char ch = sc.nextLine().charAt(0);
 		
-		System.out.println("A unicode : " + ch);
-		System.out.println("B unicode : " + ch);
+		int num = ch;
+		
+		System.out.println(ch+ " " + "unicode : " + num);
+		
+	}
+	
+	public void method6() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("국어: " );
+		int num1 = sc.nextInt();
+		
+		System.out.println("영어: " );
+		int num2 = sc.nextInt();
+		
+		System.out.println("수학: " );
+		int num3 = sc.nextInt();
+		
+		int sum = num1+num2+num3;
+		float average = sum/3f;
+		
+		System.out.println("총점 : " + sum);
+		System.out.println("평균 : " + String.format("%.2f", average));
 		
 	}
 	
