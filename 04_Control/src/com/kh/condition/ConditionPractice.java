@@ -21,6 +21,8 @@ public class ConditionPractice {
 //		c.practice3();
 //		c.practice4();
 //		c.practice5();
+//		c.practice6();
+		c.practice7();
 	}
 
 	public void practice1() {
@@ -68,8 +70,8 @@ public class ConditionPractice {
         피자 조각 수와 피자를 먹는 사람의 수를 입력받아 한 사람 당 최소 한 조각 이상 피자를 먹으려면 
         최소 몇 판의 피자를 시켜야 하는지 출력하세요.
 
-        피자 조각 수 : 70
-        피자 먹는 사람 수 : 50
+        피자 조각 수 : 7
+        피자 먹는 사람 수 : 10
         2
 
      */
@@ -149,12 +151,12 @@ public class ConditionPractice {
     	System.out.println("구매한 옷 가격:");
     	num1 = sc.nextInt();
     	
-    	if (num1 >= 1000000) {
-    		System.out.println(num1-(num1*0.05));
-    	} else if (num1 >= 3000000) {
-    		System.out.println(num1-(num1*0.1));
-    	} else if (num1 >= 500000) {
+    	if (num1 >= 500000) {
     		System.out.println(num1-(num1*0.2));
+    	} else if (num1 >= 300000) {
+    		System.out.println(num1-(num1*0.1));
+    	} else if (num1 >= 100000) {
+    		System.out.println(num1-(num1*0.05));
     	} else {
     		System.out.println("");
     	}
@@ -166,7 +168,22 @@ public class ConditionPractice {
         입력받은 각에 따라 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 출력하세요.
      */
     public void practice6() {
+    	
+    	System.out.println("각도 : ");
+    	num1 = sc.nextInt();
 
+    	if (num1 < 90) {
+    		System.out.println("1");
+    	} else if (num1 == 90) {
+    		System.out.println("2");
+    	} else if (num1 < 180) {
+    		System.out.println("3");
+    	} else if (num1 == 180) {
+    		System.out.println("4");
+    	} else {
+    		System.out.println("");
+    	}
+    	// 0을 표현하면 1이 안나오게 해야함
     }
 
 
@@ -189,9 +206,16 @@ public class ConditionPractice {
       아이디가 틀렸습니다.
     */
     public void practice7() {
- 
-    }
-
+    	
+    	System.out.println("아이디 : ");
+    	String Id = sc.nextLine();
+    	System.out.println("비밀번호 : ");
+    	int pw = sc.nextInt();
+    	
+    	
+    	
+    	
+    
     /*
         키, 몸무게를 double로 입력 받고 BMI지수를 계산하여 계산 결과에 따라
         저체중 / 정상체중 / 과체중 / 비만을 출력하세요.
