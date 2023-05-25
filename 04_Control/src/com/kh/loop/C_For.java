@@ -112,6 +112,7 @@ public class C_For {
 	
 	}
 	
+	
 	// 1부터 랜덤값까지의 합계
 	public void method7() {
 		
@@ -161,6 +162,17 @@ public class C_For {
 			System.out.println(str.charAt(i));
 		}
 	}
+	
+	public void method33() {
+		String str = "Hello";
+		
+		for(int i=0; i<=10; i++)
+		
+		System.out.println(str.charAt(i));
+		
+	}
+	
+	
 	
 	// 사용자한테 입력받은 문자열 출력
 	public void method9() {
@@ -337,7 +349,8 @@ public class C_For {
 //		c.method13();
 //		c.method14();
 //		c.method15();
-		c.method16();
+//		c.method16();
+		c.method33();
 	}
 
 }

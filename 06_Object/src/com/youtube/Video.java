@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Video {
 	
-	public String title;
-	public String comment;
-	public Date uploadAt;
-	public int count;
-	public String imageUrl;
-	public String fileUrl;
+	private String title;
+	private String comment;
+	private Date uploadAt;
+	private int count;
+	private String imageUrl;
+	private String fileUrl;
 	
 	/*
 	 * Create : 추가
@@ -33,6 +33,7 @@ public class Video {
 	public boolean deleteVideo() { // 동영상 삭제
 		return false;
 	}
-			
+	
+	
 	
 }
