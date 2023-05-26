@@ -163,16 +163,6 @@ public class C_For {
 		}
 	}
 	
-	public void method33() {
-		String str = "Hello";
-		
-		for(int i=0; i<=10; i++)
-		
-		System.out.println(str.charAt(i));
-		
-	}
-	
-	
 	
 	// 사용자한테 입력받은 문자열 출력
 	public void method9() {
@@ -350,7 +340,6 @@ public class C_For {
 //		c.method14();
 //		c.method15();
 //		c.method16();
-		c.method33();
 	}
 
 }
