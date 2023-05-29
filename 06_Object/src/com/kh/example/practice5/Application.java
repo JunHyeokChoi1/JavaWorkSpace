@@ -3,14 +3,13 @@ package com.kh.example.practice5;
 import java.util.Scanner;
 
 import com.kh.example.practice5.controller.EmployeeController;
-
 import com.kh.example.practice5.model.Employee;
 
 public class Application {
 	
 	Scanner sc = new Scanner(System.in);
 	Employee viewEmployee = new Employee();
-	EmployeeController employeeControl = new EmployeeController();
+	EmployeeController employeeController = new EmployeeController();
 	
 	public static void main(String[] args) {
 		
@@ -79,6 +78,7 @@ public class Application {
 			double bonus = sc.nextDouble();
 			
 			employeeController.add(empNo, name, gender, phone, dept, salary, bonus);
+			
 		} else { //n
 			employeeController.add(empNo, name, gender, phone);
 		}

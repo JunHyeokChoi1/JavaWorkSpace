@@ -9,7 +9,7 @@ public class User {
 	private String nickName;
 	private char gender;
 	
-		
+	Video video;
 		
 	public boolean login() { // 로그인
 		return false;
