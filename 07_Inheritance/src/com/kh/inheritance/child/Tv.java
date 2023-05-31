@@ -9,7 +9,7 @@ public class Tv extends Product{
 	public Tv() {
 	}
 
-	public Tv(String brand, String pCode, String name, int price, int inch) {
+	public Tv(String brand, String pCode, String name, int price, String inch) {
 		super(brand, pCode, name, price);
 		this.inch = inch;
 	}

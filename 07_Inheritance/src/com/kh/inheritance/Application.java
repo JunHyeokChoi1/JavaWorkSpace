@@ -9,7 +9,7 @@ public class Application {
 	public static void main(String[] args) {
 		
 		Notebook notebook = new Notebook("애플", "a1111", "맥북프로14", 279000, "m2");
-		Smartphone smartphone = new Smartphone("삼성", "a1111", "맥북프로14", 279000, moblieagency);
+		Smartphone smartphone = new Smartphone("삼성", "a1111", "맥북프로14", 279000, "");
 		Tv tv = new Tv("애플", "a1111", "맥북프로14", 279000, "");
 		
 		System.out.println(notebook);

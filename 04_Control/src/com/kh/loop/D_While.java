@@ -138,6 +138,11 @@ public class D_While {
 		
 	}
 	
+	public void method7() {
+		
+		
+	}
+		
 	/*
 	 * ------------------------------------
 	 * 1. 예금 | 2. 출금 | 3. 잔고 | 4. 종료
@@ -207,7 +212,8 @@ public class D_While {
 //		d.method3();
 //		d.method4();
 //		d.method5();
-		d.method6();
+//		d.method6();
+		d.method7();
 	}
 
 }
