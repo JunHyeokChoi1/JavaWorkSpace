@@ -3,7 +3,11 @@ package com.kh.loop;
 import java.util.Scanner;
 
 class LoopPractice {
- 
+	
+	public static void main(String[] args) {
+		LoopPractice lp = new LoopPractice();
+		lp.method5();
+	}
     /*
         사용자로부터 숫자(1~100) 1개가 입력되었을 때 카운트다운 출력하시오.
         사용자 입력 : 5
@@ -55,7 +59,13 @@ class LoopPractice {
 ​
      */
     public void method5() {
-
+    	
+    	for(int i = 1; i<=10; i++) {
+    		
+    		int num = (int)(Math.random()*7);
+    		
+    		
+    	}
     }
 
     /*

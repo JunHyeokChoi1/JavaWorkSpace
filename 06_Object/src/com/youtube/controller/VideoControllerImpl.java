@@ -1,6 +1,6 @@
 package com.youtube.controller;
 
-import com.youtube.controller.VideoController.Video;
+import com.youtube.Video;
 
 public interface VideoControllerImpl {
 	public Video upload(); //영상 업로드
