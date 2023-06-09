@@ -3,9 +3,14 @@ package com.kh.loop;
 import java.util.Scanner;
 
 class LoopPractice {
+	Scanner sc=  new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		LoopPractice lp = new LoopPractice();
+//		lp.method1();
+//		lp.method2();
+//		lp.method3();
+//		lp.method4();
 		lp.method5();
 	}
     /*
@@ -18,11 +23,49 @@ class LoopPractice {
         1
      */
     public void method1() {
-    	Scanner sc=  new Scanner(System.in);
+    	
+    	System.out.println("사용자 입력:");
+    	int num = sc.nextInt();
+    	
+    	for(int i=0; i<num; i++) {
+    		System.out.println(num-i);
+    	}
+    	
     }
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
-    }
+    	
+    	int num = 0;
+    	int sum = 0;
+    	while(true) {
+    		num++;
+    		if(num%2!=0) {
+    			sum += num;
+    		} else {
+    			sum -= num;
+    		}
+    		if(sum==100) {
+    			break;
+    		}
+    	}
+    	System.out.println(num+"일때, 총합이" + sum + "이 된다");
+    	
+    	
+//    	 int sum=0;
+//         int num=0;
+//   
+//          while(sum<100) {
+//              ++num;
+//              if(num%2==0) sum-=num;
+//              else sum+=num;
+//              //System.out.println("num="+num+"sum="+sum); // 과정을 볼 수 있다
+//          }
+//          System.out.println(num+"일 때, 총합이 "+sum+"이 된다.");
+ } 
+    	
+    	
+   
+    	
     /*
         사용자로부터 문자열을 입력 받고 문자열에서 검색될 문자를 입력 받아 해당 문자열에 그 문자가 몇 개 있는지 개수를 출력하세요. 
 ​
@@ -32,6 +75,21 @@ class LoopPractice {
 ​
     */
     public void method3() {
+    	System.out.println("문자열 : ");
+    	String str = sc.nextLine();
+    	
+    	System.out.println("문자 : ");
+    	char ch = sc.next().charAt(0);
+    	
+    	int count =0;
+    	
+    	for(int i=0; i<str.length(); i++) {
+    		if(str.charAt(i) == ch) {		
+    			count++;
+    		}
+    	}
+    	System.out.println(str + "안에 포함된 " + ch+ "개수 : " + count);
+    	
     }
     /*
         0이 나올 때까지 숫자를 출력하시오. (random 사용!)
@@ -44,7 +102,14 @@ class LoopPractice {
         0
      */
     public void method4() {
-
+    	
+    	for(int i=0; true; i++) {
+    		int num = (int)(Math.random()*10);
+    		 System.out.println(num);
+    		 if(num==0) {
+    			 break;
+    		 }
+    	} 
     }
 
     /*
@@ -60,13 +125,15 @@ class LoopPractice {
      */
     public void method5() {
     	
+    	int count = 0;
+    	int num1 = 0;
+    	
     	for(int i = 1; i<=10; i++) {
-    		
-    		int num = (int)(Math.random()*7);
-    		
-    		
-    	}
-    }
+    		int num = (int)(Math.random()*6+1);
+    		System.out.println(num);
+    	} 
+    	
+}
 
     /*
         사용자의 이름을 입력하고 컴퓨터와 가위바위보를 하세요. 
