@@ -1,7 +1,16 @@
 package com.kh.practice;
-​
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
 public class ArrayPractice {
+	Scanner sc = new Scanner(System.in);
 	
+	public static void main(String[] args) {
+		ArrayPractice a = new ArrayPractice();
+		a.method5();
+	}
 	/*
 	 * 길이가 5인 배열을 선언하고 과일 5개로 초기화 한 후 본인이 좋아하는 과일 하나를 출력하세요. (과일 5개는 뭐든지~)
 	 * 
@@ -58,7 +67,16 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method5() {
-		
+			
+			System.out.println("단어 입력: ");
+			String word = sc.nextLine();
+			
+			String[] arr = new String[];
+			
+			for(int i=word.length()-1; i>=0; i--) {
+				System.out.println(arr[i]);
+			}
+			
 	}
 	
 }
