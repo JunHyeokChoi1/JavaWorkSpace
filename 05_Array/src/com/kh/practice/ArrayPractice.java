@@ -9,7 +9,7 @@ public class ArrayPractice {
 	
 	public static void main(String[] args) {
 		ArrayPractice a = new ArrayPractice();
-		a.method5();
+		a.method3();
 	}
 	/*
 	 * 길이가 5인 배열을 선언하고 과일 5개로 초기화 한 후 본인이 좋아하는 과일 하나를 출력하세요. (과일 5개는 뭐든지~)
@@ -43,7 +43,24 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method3() {
+		String [] str = {"치킨", "피자", "햄버거"};
 		
+		System.out.println("입력:");
+		String word = sc.nextLine();
+		
+		boolean result = false;
+		
+		for(int i=0; i<str.length; i++) {
+			if(str[i].equals(word)!=result) {
+				result = true;
+				break;
+			}
+		} if(result==true) {
+			System.out.println("배달가능");
+		}
+		else {
+			System.out.println("배달불가능");
+		}
 	}
 	
 	/*
@@ -57,6 +74,11 @@ public class ArrayPractice {
 	 * */
 	public void method4() {
 		
+		
+		System.out.println("주민등록번호:");
+		String num = sc.nextLine();
+		
+		
 	}
 	
 	/*
@@ -67,16 +89,14 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method5() {
-			
-			System.out.println("단어 입력: ");
-			String word = sc.nextLine();
-			
-			String[] arr = new String[];
-			
-			for(int i=word.length()-1; i>=0; i--) {
-				System.out.println(arr[i]);
-			}
-			
+		
+		System.out.println("단어 입력: ");
+		String word = sc.nextLine();
+
+		char[] arr = word.toCharArray();
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[word.length()-1-i]);
+		}
 	}
-	
 }

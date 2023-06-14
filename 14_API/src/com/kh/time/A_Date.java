@@ -1,5 +1,6 @@
 package com.kh.time;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -139,28 +140,29 @@ public class A_Date {
 	public void practice() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("입력");
-		String br = sc.nextLine();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+	   	Date result = null;
+	   	while (true) {
+            System.out.print("태어난 날짜를 yyyy/MM/dd 형태로 작성: ");
+            String data = sc.nextLine();
+            try {
+                result = sdf.parse(data);
+                break;
+            } catch (ParseException e) {
+                System.out.println("올바른 형식으로 입력해 주세요.");
+            }
+	   	}
 		
-		String[] date = br.split("/");
-		System.out.print();
+		Calendar inputDate = Calendar.getInstance();
+		Calendar today = Calendar.getInstance();
 		
-		Date today = new Date();
+		inputDate.setTime(result);
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		String formatDate = sdf.format(date);
-		System.out.println(formatDate);
+		SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy/MM/dd은 E요일입니다.");
+		System.out.println(sdf2.format(result));
 		
-//		Calendar ca12 = Calendar.getInstance();
-//		ca12.setTime(today);
-//		System.out.println(ca12.getTime().toInstant());
-		
-//		 - ca12.setTime(today);
-		
-		
-		
-		// 문자열 -> 데이트 -> cal 
-		
+		long day = (today.getTimeInMillis()-inputDate.getTimeInMillis())/(1000*24*60*60);
+		System.out.println("태어난 날부터 지금까지" + day + "일 지났습니다.");
 	}
 		
 }
