@@ -2,7 +2,9 @@ package Practice;
 
 public class Study {
 	
-	/*
+/*
+상수의 선언 
+ex) final(한번 정해지면 값 바꾸기x) static double PI = 3.141592; 
 
 객체생성
 클래스명 변수명 = new 클래스명;
@@ -69,7 +71,8 @@ ex)
 ArrayList<Person> list = new ArrayList<person>(); //객체 생성
 list.add(new Person(...));	//매번 형변환 안해도됨
 
-	 */
+
+*/
 	
 	
 }

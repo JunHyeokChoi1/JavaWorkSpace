@@ -9,9 +9,9 @@ public class B_Other {
 	
 	public static void main(String[] args) {
 		B_Other b = new B_Other();
-//		b.method1();
+		b.method1();
 //		b.method2();
-		b.method3();
+//		b.method3();
 	}
 	
 	// vector
