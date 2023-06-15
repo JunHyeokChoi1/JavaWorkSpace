@@ -19,8 +19,8 @@ public class C_Function {
 		Student student = new Student("김경미", 20, "여자", 90, 30);
 		C_Function c = new C_Function();
 //		c.method1(student);
-//		c.method2();
-		c.method3(student);
+		c.method2();
+//		c.method3(student);
 	}
 
 	// Function<T, R> : 객체 T를 객체 R로 매핑
@@ -32,7 +32,7 @@ public class C_Function {
 	
 	// BiFunction<T, U R> : 객체 T와 U를 객체 R로 매핑
 	public void method2() {
-		BiFunction<String, Integer, Student> biFunction = (name, age)->new Student(name, age);
+		BiFunction<String, Integer, Student> biFunction = (name, age) -> new Student(name, age);
 		System.out.println(biFunction.apply("최승환", 15));
 	}
 	
