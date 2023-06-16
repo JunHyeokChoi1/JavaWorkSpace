@@ -1,9 +1,9 @@
 package com.kh.polymorphism.model.child;
 
-import com.kh.polymorphism.moedel.parent.Employee;
+import com.kh.polymorphism.model.parent.Employee;
 
-public class Manager extends Employee{
-	
+public class Manager extends Employee {
+
 	private String dept;
 
 	public Manager() {
@@ -13,7 +13,6 @@ public class Manager extends Employee{
 		super(name, salary);
 		this.dept = dept;
 	}
-
 
 	public String getDept() {
 		return dept;
@@ -25,8 +24,13 @@ public class Manager extends Employee{
 
 	@Override
 	public String toString() {
-		return super.toString() + "/Manager [dept=" + dept + "]";
+		return super.toString() + " / Manager [dept=" + dept + "]";
 	}
-	
-	
 }
+
+
+
+
+
+
+

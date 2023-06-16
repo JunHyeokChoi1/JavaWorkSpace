@@ -1,11 +1,10 @@
 package com.kh.practice.model;
 
-public class AniBook extends Book{// 상속 관계
-	
-	private int accessAge;	//제한나이
+public class AniBook extends Book { // 상속 관계
 
-	public AniBook() {
-	}
+	private int accessAge; // 제한 나이
+
+	public AniBook() {}
 
 	public AniBook(String title, int accessAge) {
 		super(title);
@@ -22,7 +21,15 @@ public class AniBook extends Book{// 상속 관계
 
 	@Override
 	public String toString() {
-		return super.toString() + "/AniBook [accessAge=" + accessAge + "]";
+		return super.toString() + " / AniBook [accessAge=" + accessAge + "]";
 	}
-	
+
 }
+
+
+
+
+
+
+
+

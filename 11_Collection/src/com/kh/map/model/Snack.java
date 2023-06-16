@@ -1,32 +1,32 @@
 package com.kh.map.model;
 
 public class Snack {
-	private String flavor;
-	private int calolie;
+
+	private String flavor; // 맛
+	private int calorie;   // 칼로리
 	
-	
-	public Snack() {
-	}
-	public Snack(String flavor, int calolie) {
+	public Snack() {}
+	public Snack(String flavor, int calorie) {
 		this.flavor = flavor;
-		this.calolie = calolie;
+		this.calorie = calorie;
 	}
+	
 	public String getFlavor() {
 		return flavor;
 	}
 	public void setFlavor(String flavor) {
 		this.flavor = flavor;
 	}
-	public int getCalolie() {
-		return calolie;
+	public int getCalorie() {
+		return calorie;
 	}
-	public void setCalolie(int calolie) {
-		this.calolie = calolie;
+	public void setCalorie(int calorie) {
+		this.calorie = calorie;
 	}
+	
 	@Override
 	public String toString() {
-		return "Snack [flavor=" + flavor + ", calolie=" + calolie + "]";
+		return "Snack [flavor=" + flavor + ", calorie=" + calorie + "]";
 	}
-	
-	
+
 }

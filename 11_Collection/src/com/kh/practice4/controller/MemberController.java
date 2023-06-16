@@ -1,8 +1,6 @@
 package com.kh.practice4.controller;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
 
 import com.kh.practice4.model.Member;
 
@@ -20,6 +18,8 @@ public class MemberController {
 			map.put(id, m);
 			return true;
 		}
+		
+		
 		return false;
 	}
 	
@@ -32,9 +32,11 @@ public class MemberController {
 		 * 같다면 저장된 Member의 이름 반환, 그 외 모든 상황에는 null 반환
 		 * 
 		 * */
-		if(map.containsKey(id) && map.get(id).getPassword().equals(password)) {
-				return map.get(id).getName();
+		if(map.containsKey(id) 
+				&& map.get(id).getPassword().equals(password)) {
+			return map.get(id).getName();
 		}
+	
 		return null;
 	}
 	
@@ -44,11 +46,11 @@ public class MemberController {
 		 * 아이디가 존재하면서 저장된 비밀번호와 사용자가 입력한 비밀번호(oldPw)가
 		 * 같을 때 새로운 비밀번호로 바꾸고 true 반환, 아니라면 false 반환
 		 * */
-		if(map.containsKey(id) && map.get(id).getPassword().equals(oldPw)) {
+		if(map.containsKey(id) 
+				&& map.get(id).getPassword().equals(oldPw)) {
 			map.put(id, new Member(newPw, map.get(id).getName()));
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -59,6 +61,15 @@ public class MemberController {
 		 * 
 		 * */
 		map.put(id, new Member(map.get(id).getPassword(), newName));
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 	

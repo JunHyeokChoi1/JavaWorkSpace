@@ -1,12 +1,21 @@
-package com.kh.practice2.Exception;
+package com.kh.practice2.exception;
 
-public class DuplicateNameException extends Exception{
-	
+public class DuplicateNameException extends Exception {
+
 	public DuplicateNameException() {
-		this("This is DuplicatenNameException...");
+		this("This is DuplicateNameException...");
 	}
 	
 	public DuplicateNameException(String message) {
 		super(message);
 	}
+	
 }
+
+
+
+
+
+
+
+

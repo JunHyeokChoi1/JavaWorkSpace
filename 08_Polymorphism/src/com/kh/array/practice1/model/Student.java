@@ -1,5 +1,7 @@
 package com.kh.array.practice1.model;
+
 public class Student {
+
 	private String name;
 	private String subject;
 	private int score;

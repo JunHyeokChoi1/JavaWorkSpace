@@ -1,17 +1,15 @@
 package com.kh.practice;
 
-public class Iphone14Pro extends Smartphone implements Pen{
-	
-	String name = "iphone14Pro";
+public class IPhone14Pro extends SmartPhone implements Pen {
+
+	String name = "iPhone 14 Pro";
 	String brand = "애플";
 	
-	public Iphone14Pro() {
-	
-	}
-	
+	public IPhone14Pro() {}
+
 	public void printInformation() {
-		super.PrintInformation(name, brand);
-		System.out.println("팬 탑재 여부: " + pen());
+		super.printInformation(name, brand);
+		System.out.println("펜 탑재 여부 : " + pen());
 	}
 
 	@Override
@@ -33,7 +31,5 @@ public class Iphone14Pro extends Smartphone implements Pen{
 	public boolean pen() {
 		return false;
 	}
-
-	
 	
 }

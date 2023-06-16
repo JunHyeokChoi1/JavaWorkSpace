@@ -1,6 +1,6 @@
 package com.kh.step2;
 
-public class GoThread implements Runnable{
+public class GoThread implements Runnable {
 	
 	public void run() {
 		
@@ -9,7 +9,17 @@ public class GoThread implements Runnable{
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {}
 			String name = Thread.currentThread().getName();
-			System.out.println("CurrentThread ::" + name + ", " + i);
+			System.out.println("CurrentThread :: " + name + ", " + i);
 		}
+		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

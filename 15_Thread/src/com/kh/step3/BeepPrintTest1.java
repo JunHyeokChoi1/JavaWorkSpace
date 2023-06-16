@@ -7,13 +7,28 @@ public class BeepPrintTest1 {
 	public static void main(String[] args) {
 		
 		BeepPrintThread bpt = new BeepPrintThread();
-		Thread bptThread = new Thread(bpt, "BeepPrintThread");
-		
 		BeepThread bt = new BeepThread();
-		Thread btThread = new Thread(bt, "BeepThread");
+		
+		Thread bpThread = new Thread(bpt, "BeepPrintThread");
+		Thread bThread = new Thread(bt, "BeepThread");
+		
+		bpThread.start();
+		bThread.start();
+
 		
 		
-		bptThread.start();
-		btThread.start();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
+
 }

@@ -6,9 +6,10 @@ import java.util.function.Supplier;
 
 /*
  * Supplier
- * - Supplier 함수적 인터페이스는 매개변수가 없고 리턴 값이 있는 getXXX() 추상 메서드를 가지고 있다.
+ * - Supplier 함수적 인터페이스는 매개변수가 없고 리턴 값이 있는
+ *   getXXX() 추상 메서드를 가지고 있다.
  * - getXXX() 추상 메서드는 데이터를 리턴(공급)하는 역할을 한다.
- */
+ * */
 
 public class B_Supplier {
 
@@ -21,8 +22,8 @@ public class B_Supplier {
 	
 	// Supplier<T> : T 객체를 리턴
 	public void method1() {
-		
-		Supplier<String> supplier = () -> "Supplier는 제네릭으로 지정된 타입의 객체를 리턴한다.";
+		Supplier<String> supplier = ()
+					-> "Supplier는 제네릭으로 지정된 타입의 객체를 리턴한다.";
 		System.out.println(supplier.get());
 	}
 	
@@ -33,15 +34,26 @@ public class B_Supplier {
 	}
 	
 	/*
-	 * IntSupplier : int 값을 리턴 (추상메서드 : int getAsInt())
-	 * DoubleSupplier : double 값을 리턴 (추상메서드 : double getAsDouble())
-	 * LongSupplier : long 값을 리턴 (추상메서드 : long getAsLong())
-	 */
+	 * IntSupplier : int 값을 리턴 
+	 *               (추상메서드 : int getAsInt())
+	 * DoubleSupplier : double 값을 리턴 
+	 *                  (추상메서드 : double getAsDouble())
+	 * LongSupplier : long 값을 리턴
+	 * */
 	public void method3() {
-		
-		LongSupplier longSupplier = () -> 2345678996466753L;
+		LongSupplier longSupplier = () -> 23456789034567890L;
 		System.out.println(longSupplier.getAsLong());
-		
 	}
 	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+

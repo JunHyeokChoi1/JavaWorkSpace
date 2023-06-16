@@ -4,24 +4,26 @@ public class Super implements Player {
 
 	@Override
 	public void run() {
-		System.out.println("엄청 빨리달려");
-		
+		System.out.println("엄청 빨리 달리다");
 	}
 
 	@Override
 	public void jump() {
-		System.out.println("아주 높이 점프 할 수 있지");
+		System.out.println("아주 높이 점프 할 수 있지!");
 	}
 
 	@Override
 	public void turn() {
-		System.out.println("한바퀴돌아~~");
-		
+		System.out.println("한 바퀴 돌아~~");
 	}
 
 	@Override
-	public void showLevleMessage() {
-		System.out.println("====고급자 레벨 ====");
+	public void showLevelMessage() {
+		System.out.println("===== 고급자 레벨 =====");
 	}
 
 }
+
+
+
+
