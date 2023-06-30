@@ -1,7 +1,7 @@
-package com.kh.practice2.Exception;
+package com.kh.practice2.exception;
 
-public class RecordNotFoundException extends Exception{
-	
+public class RecordNotFoundException extends Exception {
+
 	public RecordNotFoundException() {
 		this("This is RecordNotFoundException...");
 	}
@@ -9,4 +9,9 @@ public class RecordNotFoundException extends Exception{
 	public RecordNotFoundException(String message) {
 		super(message);
 	}
+	
 }
+
+
+
+

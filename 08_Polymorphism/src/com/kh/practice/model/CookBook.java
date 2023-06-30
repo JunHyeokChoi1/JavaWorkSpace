@@ -1,17 +1,15 @@
 package com.kh.practice.model;
 
-public class CookBook extends Book{
-	
-	private boolean coupon;	//요리 쿠폰 유무
+public class CookBook extends Book {
 
-	public CookBook() {
-	}
+	private boolean coupon; // 요리 쿠폰 유무
+
+	public CookBook() {}
 
 	public CookBook(String title, boolean coupon) {
 		super(title);
 		this.coupon = coupon;
 	}
-
 
 	public boolean isCoupon() {
 		return coupon;
@@ -23,8 +21,9 @@ public class CookBook extends Book{
 
 	@Override
 	public String toString() {
-		return super.toString() + "/ CookBook [coupon=" + coupon + "]";
+		return super.toString() + " / CookBook [coupon=" + coupon + "]";
 	}
 	
+
 	
 }

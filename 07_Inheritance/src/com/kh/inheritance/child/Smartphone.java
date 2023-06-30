@@ -2,22 +2,27 @@ package com.kh.inheritance.child;
 
 import com.kh.inheritance.parent.Product;
 
-public class Smartphone extends Product{
-	
-	private String mobileAgency;
-	public Smartphone() {
+public class SmartPhone extends Product {
+
+	private String mobileAgency; // 통신사
+
+	public SmartPhone() {
 	}
 
-	public Smartphone(String brand, String pCode, String name, int price, String mobileAgnecy) {
+	public SmartPhone(String brand, String pCode, String name, int price, String mobileAgency) {
 		super(brand, pCode, name, price);
 		this.mobileAgency = mobileAgency;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + "Smartphone [moblieAgency=" + mobileAgency + "]";
+		return super.toString() + ", SmartPhone [mobileAgency=" + mobileAgency + "]";
 	}
 	
 	
-		
+	
 }
+
+
+
+

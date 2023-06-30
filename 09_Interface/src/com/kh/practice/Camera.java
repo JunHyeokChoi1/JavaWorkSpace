@@ -1,7 +1,6 @@
 package com.kh.practice;
 
-public interface Camera{
+public interface Camera {
 	
 	String picture();
-		
 }

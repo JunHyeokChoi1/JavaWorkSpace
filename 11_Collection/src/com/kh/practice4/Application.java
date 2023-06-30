@@ -1,11 +1,15 @@
 package com.kh.practice4;
+
 import java.util.Scanner;
+
 import com.kh.practice4.controller.MemberController;
 import com.kh.practice4.model.Member;
+
 public class Application {
 	
 	private Scanner sc = new Scanner(System.in);
 	private MemberController mc = new MemberController();
+
 	public static void main(String[] args) {
 		
 		Application app = new Application();
@@ -55,10 +59,12 @@ public class Application {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-		Member member = new Member(password, name);
-		if(mc.joinMembership(id, member)) {
+		if(mc.joinMembership(id, new Member(password, name))) {
 			System.out.println("성공적으로 회원가입 완료하였습니다.");
-		} else System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
+		} else {
+			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
+		}
+		
 		
 		
 		
@@ -69,7 +75,7 @@ public class Application {
 		/*
 		 * 아이디와 비밀번호를 사용자에게 받아 mc의 login() 메서드로 넘겨 줌
 		 * 반환 값 있으면 "OOO님, 환영합니다!" 출력 후 로그인 된 화면으로(memberMenu())
-		 * 없으면 "틀란 아이디 또는 비밀번호입니다. 다시 입력해주세요." 출력
+		 * 없으면 "틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요." 출력
 		 * */
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
@@ -77,12 +83,18 @@ public class Application {
 		String password = sc.nextLine();
 		
 		String name = mc.login(id, password);
-		if(name != null) {
-			System.out.println(name+"님, 환영합니다!");
+		
+		if(name!=null) {
+			System.out.println(name + "님, 환영합니다!");
 			memberMenu();
 		} else {
 			System.out.println("틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요.");
 		}
+		
+		
+		
+		
+		
 		
 	}
 	
@@ -125,8 +137,15 @@ public class Application {
 		
 		if(mc.changePassword(id, oldPw, newPw)) {
 			System.out.println("비밀번호 변경에 성공했습니다.");
+		} else {
+			System.out.println("비밀번호 변경에 실패했습니다. 다시 입력해주세요.");
 		}
-		else System.out.println("비밀번호 변경에 실패했습니다. 다시 입력해주세요.");
+		
+		
+		
+		
+		
+
 	}
 	
 	public void changeName() {
@@ -145,15 +164,33 @@ public class Application {
 		String password = sc.nextLine();
 		
 		String name = mc.login(id, password);
-		if(name !=null) {
-			System.out.println("현재 저장되어 있는 이름 : "+name);
+		if(name!=null) {
+			
+			System.out.println("현재 설정된 이름 : " + name);
 			System.out.print("변경할 이름 : ");
 			String newName = sc.nextLine();
-		
 			mc.changeName(id, newName);
 			System.out.println("이름 변경에 성공하였습니다.");
-		} else System.out.println("이름 변경에 실패했습니다. 다시 입력해주세요.");
+			
+		} else {
+			System.out.println("이름 변경에 실패했습니다. 다시 입력해주세요.");
+		}
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
 	}
 	
 }

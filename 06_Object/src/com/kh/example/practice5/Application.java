@@ -6,13 +6,13 @@ import com.kh.example.practice5.controller.EmployeeController;
 import com.kh.example.practice5.model.Employee;
 
 public class Application {
-	
+
 	Scanner sc = new Scanner(System.in);
 	Employee viewEmployee = new Employee();
 	EmployeeController employeeController = new EmployeeController();
 	
 	public static void main(String[] args) {
-		
+
 		Application app = new Application();
 		
 		boolean check = true;
@@ -29,95 +29,103 @@ public class Application {
 				app.printEmp();
 				break;
 			case 9:
-				System.out.println("프로그램을 종료합니다");
+				System.out.println("프로그램을 종료합니다.");
 				check = false;
 				break;
 			}
 		}
-		
-		
 	}
+	
 	public int employeeMenu() {
 		System.out.println("1. 사원 정보 추가");
 		System.out.println("2. 사원 정보 수정");
 		System.out.println("3. 사원 정보 출력");
 		System.out.println("9. 프로그램 종료");
+		System.out.print("메뉴 번호를 누르세요 : ");
 		
-		System.out.println("메뉴 번호를 누르세요: ");
 		return Integer.parseInt(sc.nextLine());
-		
-		 
 	}
-	
 	public void insertEmp() {
-		
-		System.out.print("사원 번호: ");
+		/*
+		private int empNo;
+		private String name;
+		private char gender;
+		private String phone;
+		private String dept;
+		private int salary;
+		private double bonus;
+		*/
+		System.out.print("사원 번호 : ");
 		int empNo = Integer.parseInt(sc.nextLine());
 		
-		System.out.print("사원 이름: ");
+		System.out.print("사원 이름 : ");
 		String name = sc.nextLine();
 		
-		System.out.print("사원 성별: ");
+		System.out.print("사원 성별 : ");
 		char gender = sc.nextLine().charAt(0);
 		
-		System.out.print("전화 번호: ");
+		System.out.print("전화 번호 : ");
 		String phone = sc.nextLine();
 		
-		System.out.println("추가 정보를 더 입력하시겠습니까?(y/n) : ");
+		System.out.print("추가 정보를 더 입력하시겠습니까?(y/n) : ");
 		String add = sc.nextLine();
 		
-		if (add.equals("y")) {
+		if(add.equals("y")) {
 			
-			System.out.print("사업 부서:");
+			System.out.print("사원 부서 : ");
 			String dept = sc.nextLine();
 			
-			System.out.print("사원 연봉: ");
+			System.out.print("사원 연봉 : ");
 			int salary = Integer.parseInt(sc.nextLine());
 			
-			System.out.print("보너스 율: ");
-			double bonus = sc.nextDouble();
+			System.out.print("보너스율 : ");
+			double bonus = Double.parseDouble(sc.nextLine());
 			
 			employeeController.add(empNo, name, gender, phone, dept, salary, bonus);
 			
-		} else { //n
+		} else { // n
 			employeeController.add(empNo, name, gender, phone);
 		}
-			
+		
 	}
-	
 	public void updateEmp() {
-		System.out.println("사원의 어떤 정보를 수정하시겠습니까:");
-		System.out.println("1.전화번호");
+		
+		System.out.println("사원의 어떤 정보를 수정하시겠습니까?");
+		System.out.println("1. 전화번호");
 		System.out.println("2. 사원 연봉");
 		System.out.println("3. 보너스율");
-		System.out.println("9.돌아가기");
-		System.out.println("메뉴 번호를 누르세요:");
+		System.out.println("9. 돌아가기");
+		System.out.print("메뉴 번호를 누르세요 : ");
 		int select = Integer.parseInt(sc.nextLine());
 		
 		switch(select) {
-			case 1:
-				System.out.println("전화번호입력:");
-				String phone = sc.nextLine();
-				employeeController.modify(phone);
-				break;
-			case 2:
-				System.out.println("사원연봉입력:");
-				int salary = Integer.parseInt(sc.nextLine());
-				employeeController.modify(salary);
-				break;
-			case 3:
-				System.out.println("보너스율 입력:");
-				double bonus = Double.parseDouble(sc.nextLine());
-				employeeController.modify(bonus);
-				break;
-			case 9:
-				break;
+		case 1:
+			System.out.print("전화 번호 입력 : ");
+			String phone = sc.nextLine();
+			employeeController.modify(phone);
+			break;
+		case 2:
+			System.out.print("사원 연봉 입력 : ");
+			int salary = Integer.parseInt(sc.nextLine());
+			employeeController.modify(salary);
+			break;
+		case 3:
+			System.out.print("보너스율 입력 : ");
+			double bonus = Double.parseDouble(sc.nextLine());
+			employeeController.modify(bonus);
+			break;
+		case 9:
+			break;
 		}
+	
 	}
 	
 	public void printEmp() {
 		System.out.println(employeeController.info());
 	}
-	
 
 }
+
+
+
+

@@ -8,7 +8,12 @@ public class ArtistAscending implements Comparator<Music>{
 
 	@Override
 	public int compare(Music o1, Music o2) {
-		return o1.getTitle().compareTo(o2.getTitle());
+		return o1.getArtist().compareTo(o2.getArtist());
 	}
 
 }
+
+
+
+
+

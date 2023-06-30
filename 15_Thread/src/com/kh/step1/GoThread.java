@@ -1,7 +1,7 @@
 package com.kh.step1;
 
-public class GoThread extends Thread{
-	
+public class GoThread extends Thread {
+
 	public GoThread(String name) {
 		super(name);
 	}
@@ -13,7 +13,17 @@ public class GoThread extends Thread{
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {}
 			String name = Thread.currentThread().getName();
-			System.out.println("CurrentThread ::" + name + ", " + i);
+			System.out.println("CurrentThread :: " + name + ", " + i);
 		}
+		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

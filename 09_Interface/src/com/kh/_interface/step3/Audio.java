@@ -1,11 +1,11 @@
 package com.kh._interface.step3;
 
-public class Audio implements RemoteControl, Searchable{
-	
+public class Audio implements RemoteControl, Searchable {
+
 	private int volume;
 	
 	@Override
-	public void setvolume(int volume) {
+	public void setVolume(int volume) {
 		if(volume > RemoteControl.MAX_VOLUME) {
 			this.volume = RemoteControl.MAX_VOLUME;
 		} else if(volume < RemoteControl.MIN_VOLUME) {
@@ -13,24 +13,26 @@ public class Audio implements RemoteControl, Searchable{
 		} else {
 			this.volume = volume;
 		}
-		System.out.println("현재 Tv 볼륨: " + this.volume);
-		
+		System.out.println("현재 Audio 볼륨 : " + this.volume);
 	}
 
 	@Override
 	public void search(String url) {
-		System.out.println(url + "을 연결합니다");
-		
+		System.out.println(url + "을 연결합니다.");
 	}
 
 	@Override
 	public void turnOn() {
-		System.out.println("Audio를 켭니다");
+		System.out.println("Audio를 켭니다.");
 	}
 
 	@Override
 	public void turnOff() {
-		System.out.println("Audio를 끕니다");
+		System.out.println("Audio를 끕니다.");
 	}
 
 }
+
+
+
+

@@ -3,13 +3,12 @@ package com.kh.lang;
 /*
  * Wrapper 클래스
  * - 기본 자료형을 객체로 포장해 주는 클래스
- * - 기본 자료형으로 사용해도 되지만 해당 기본 타입을 객체로 취급해서 처리해야 하는 경우 사용
- *  ex) Integer.parseInt
+ * - 기본 자료형으로 사용해도 되지만 해당 기본 타입을 객체로 취급해서
+ *   처리해야 하는 경우 사용
  * - Boxing : 기본 자료형을 Wrapper 클래스로 포장해주는 것
- * - UnBoxing : Wrapper 클래스를 기본 자료형으로 변경 해 주는 것 
- * 
- */
-
+ * - UnBoxing : Wrapper 클래스를 기본 자료형으로 변경해주는 것
+ *   
+ * */
 
 public class B_Wrapper {
 
@@ -18,8 +17,9 @@ public class B_Wrapper {
 //		b.method1();
 		b.method2();
 	}
-	public void method1() {
 	
+	public void method1() {
+		
 		// Boxing : 기본 자료형 -> Wrapper 객체
 		double dNum1 = 3.14;
 		double dNum2 = 3.14;
@@ -28,9 +28,9 @@ public class B_Wrapper {
 		Double double1 = new Double(dNum1);
 		Double double2 = new Double(dNum2);
 		
-		System.out.println("dNum1 == dNum2 : " + (dNum1 == dNum2));
-		System.out.println("dNum2 == double2 : " + (dNum2 == double2));
-		System.out.println("double1 == double2 : " + (double1 == double2));
+		System.out.println("dNum1 == dNum2 : " + (dNum1 == dNum2)); // true
+		System.out.println("dNum2 == double2 : " + (dNum2 == double2)); // true
+		System.out.println("double1 == double2 : " + (double1 == double2)); // false
 		
 		// 클래스에서 제공하는 메서드들을 사용할 수 있음!
 		System.out.println("equals : " + double1.equals(double2));
@@ -40,20 +40,24 @@ public class B_Wrapper {
 		// 2. 객체를 직접 생성하지 않고 정적 메서드(valueOf)를 통한 방법
 		Double double3 = Double.valueOf(1.11);
 		Double double4 = Double.valueOf("1.11");
+		
 		System.out.println(double3);
 		System.out.println(double4);
 		
 		System.out.println();
+		
 		// 3. Auto Boxing : 같은 타입만 가능
 		Integer integer = 5;
-		Double double5 = 3.555; 
+		Double double5 = 3.555;
 		System.out.println(integer);
 		System.out.println(double5);
 		
+		System.out.println();
+		
 		// UnBoxing : Wrapper 객체 -> 기본 자료형
 		// 1. Wrapper 객체 메서드를 통한 방법
-		Double dNum3 = double1.doubleValue();
-		Double dNum4 = double2.doubleValue();
+		double dNum3 = double1.doubleValue();
+		double dNum4 = double2.doubleValue();
 		
 		// 2. Wrapper 클래스의 정적 메서드를 통한 방법
 		int iNum = Integer.parseInt("19");
@@ -63,8 +67,11 @@ public class B_Wrapper {
 		double dNum6 = double1;
 		double dNum7 = double3;
 		
-		// 자바 1.9 버전 이후로는 Boxing, UnBoxing 기능을 안쓰도록 Deprecated 되어 있음
+		// 자바 1.9 버전 이후로는 Boxing, UnBoxing 기능을 안쓰도록
+		// Deprecated 되어 있음
+		
 	}
+	
 	// String과 Wrapper 클래스 간의 변경
 	public void method2() {
 		
@@ -73,7 +80,8 @@ public class B_Wrapper {
 		
 		System.out.println(str1 + str2); // 103.14
 		
-		// 1. 문자열을 기본 자료형으로 변경 : Wrapper 클래스에서 제공하는 paresXXX()
+		// 1. 문자열을 기본 자료형으로 변경
+		//     : Wrapper 클래스에서 제공하는 parseXXX()
 		int iNum = Integer.parseInt(str1);
 		double dNum = Double.parseDouble(str2);
 		
@@ -84,13 +92,31 @@ public class B_Wrapper {
 		String str3 = String.valueOf(iNum);
 		String str4 = String.valueOf(dNum);
 		
-		System.out.println(str3 + str4); //103.14
+		System.out.println(str3 + str4); // 103.14
 		
-		// Wrapper 클래스에서 제공하는 calueOf().toString() 메서드를 사용하는 방법
+		// Wrapper 클래스에서 제공하는 
+		// valueOf().toString() 메서드를 사용하는 방법
 		String str5 = Integer.valueOf(iNum).toString();
 		String str6 = Double.valueOf(dNum).toString();
 		
-		System.out.println(str5 + str6); //103.14
+		System.out.println(str5 + str6); // 103.14
+		
 		
 	}
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+

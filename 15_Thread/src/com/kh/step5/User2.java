@@ -1,7 +1,7 @@
 package com.kh.step5;
 
 public class User2 extends Thread {
-	
+
 	private Calculator calculator;
 	
 	public void setCalculator(Calculator calculator) {
@@ -12,4 +12,9 @@ public class User2 extends Thread {
 	public void run() {
 		calculator.setMemory(50);
 	}
+	
 }
+
+
+
+

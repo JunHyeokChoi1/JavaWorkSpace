@@ -3,16 +3,16 @@ package com.kh.set;
 import java.util.Set;
 import java.util.TreeSet;
 
-import javax.swing.text.SimpleAttributeSet;
-
 import com.kh.set.model.Person;
 
 /*
  * TreeSet
- * 저장과 동시에 자동 오름차순 정렬, HashSet보다 데이터 추가 삭제할때 시간이 더 걸림
- */
+ * - 저장과 동시에 자동 오름차순 정렬
+ * - HashSet보다 데이터 추가, 삭제에 시간이 더 걸림
+ * */
 
 public class B_TreeSet {
+
 	public static void main(String[] args) {
 		B_TreeSet b = new B_TreeSet();
 //		b.method1();
@@ -30,10 +30,13 @@ public class B_TreeSet {
 		set.add("마동석");
 		
 		System.out.println(set);
+		
 	}
 	
 	public void method2() {
+		
 		TreeSet<Person> set = new TreeSet<Person>();
+		
 		set.add(new Person("마동석", 52));
 		set.add(new Person("이준혁", 39));
 		set.add(new Person("아오키 무네타카", 43));
@@ -42,6 +45,7 @@ public class B_TreeSet {
 		set.add(new Person("이준혁", 39));
 		
 		System.out.println(set);
+		
 	}
 	
 }

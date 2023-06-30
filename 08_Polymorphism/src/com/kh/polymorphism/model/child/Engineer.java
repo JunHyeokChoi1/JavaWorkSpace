@@ -1,23 +1,19 @@
 package com.kh.polymorphism.model.child;
 
-import com.kh.polymorphism.moedel.parent.Employee;
+import com.kh.polymorphism.model.parent.Employee;
 
 public class Engineer extends Employee {
-	
+
 	private String tech;
 	private int bonus;
 	
-	public Engineer() {
-	}
-	
-	
-	public Engineer(String tech, int bonus, String name, int salary) {
+	public Engineer() {}
+	public Engineer(String name, int salary, String tech, int bonus) {
 		super(name, salary);
 		this.tech = tech;
 		this.bonus = bonus;
 	}
-
-
+	
 	public String getTech() {
 		return tech;
 	}
@@ -30,10 +26,14 @@ public class Engineer extends Employee {
 	public void setBonus(int bonus) {
 		this.bonus = bonus;
 	}
+	
 	@Override
 	public String toString() {
-		return super.toString() + "/Engineer [tech=" + tech + ", bonus=" + bonus + "]";
+		return super.toString() + " / Engineer [tech=" + tech + ", bonus=" + bonus + "]";
 	}
-	
-	
 }
+
+
+
+
+

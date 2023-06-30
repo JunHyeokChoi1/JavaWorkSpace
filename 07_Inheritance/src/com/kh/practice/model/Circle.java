@@ -1,8 +1,9 @@
 package com.kh.practice.model;
 
-public class Circle extends Point{
-	protected int radius;
-	
+public class Circle extends Point {
+
+	private int radius;
+
 	public Circle() {
 	}
 
@@ -26,10 +27,12 @@ public class Circle extends Point{
 	
 	@Override
 	public String draw() {
-		return super.draw() + "반지름: " + this.radius;
+		return super.draw() + "반지름 : " + this.radius;
 	}
 	
-	
-	
-	
 }
+
+
+
+
+
